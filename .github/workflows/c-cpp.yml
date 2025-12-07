@@ -14,4 +14,4 @@ jobs:
     steps:
     - uses: actions/checkout@v6
     - name: Build Kernel
-      run: sudo apt install gcc && make config 
+      run: sudo apt full-upgrade && make config 
