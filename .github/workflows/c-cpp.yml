@@ -1,0 +1,19 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "idroid-3.0.0" ]
+  pull_request:
+    branches: [ "idroid-3.0.0" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v6
+    - name: configure
+      run: ./configure
+    - name: make
+      run: make
