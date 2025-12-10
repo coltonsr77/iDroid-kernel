@@ -14,4 +14,4 @@ jobs:
     steps:
     - uses: actions/checkout@v6
     - name: Build Kernel
-      run: sudo apt update && sudo apt full-upgrade && make config
+      run: sudo apt update && sudo apt full-upgrade && sudo apt-get install git-core libncurses5-dev && make menuconfig
